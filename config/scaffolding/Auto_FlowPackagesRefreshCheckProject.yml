@@ -8,7 +8,22 @@ packages:
   gitUsername: Munatri
   gitBranch: main
 - name: PublicPrivateCheck
+  version: "1.0"
   gitServerName: GithubOrigin1
   gitUrl: https://github.com/Munatri
   gitUsername: Munatri
   gitBranch: main
+- name: SecurityTabCheck
+  gitServerName: GithubOrigin1
+  gitUrl: https://github.com/Munatri
+  gitUsername: Munatri
+  gitBranch: main
+services:
+- serviceName: project.auto_flowpackagesrefreshcheck.streaming.connections:EmbeddedMessaging
+  packages:
+  - name: Auto_FlowPackagesRefreshCheckProject
+    version: "1.0"
+  - name: SecurityTabCheck
+    version: "1.0"
+  - name: PublicPrivateCheck
+    version: "1.0"
